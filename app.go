@@ -3,6 +3,7 @@
 package main
 
 import (
+	"github.com/mclark4386/test_gopherjs/hellomessage"
 	"myitcv.io/react"
 )
 
@@ -21,6 +22,11 @@ func (a AppDef) Render() react.Element {
 		),
 		react.P(nil,
 			react.S("This is my first GopherJS React App."),
+		),
+		hellomessage.HelloMessage(
+			hellomessage.HelloMessageProps{
+				Name: "Bob",
+			},
 		),
 	)
 }
